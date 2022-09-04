@@ -1,10 +1,10 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 from pprint import pprint
 
-from google_calendar.event import Event
-from google_calendar.insert import insert_event
-from google_calendar.setup import calendar_setup
-from parse_omstu_rasp import get_term_id, get_schedule_as_lessons
+from src.google_calendar.event import Event
+from src.google_calendar.insert import insert_event
+from src.google_calendar.setup import calendar_setup
+from src.parse_omstu_rasp import get_term_id, get_schedule_as_lessons
 
 
 def main() -> None:
@@ -24,7 +24,7 @@ def main() -> None:
     )
 
     service = calendar_setup(
-        creds_path='credentials/credentials.json'
+        creds_path='src/credentials/credentials.json'
     )
     dt_format = "%Y.%m.%d %H:%M"
 

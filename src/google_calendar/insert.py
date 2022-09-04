@@ -1,7 +1,7 @@
 from typing import Any, Mapping
 
-from google_calendar.event import Event
-from google_calendar.setup import CalendarService
+from src.google_calendar.event import Event
+from src.google_calendar.setup import CalendarService
 
 
 def insert_event(
